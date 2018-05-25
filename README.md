@@ -1,0 +1,2 @@
+# SCTest
+Supercollider test app
