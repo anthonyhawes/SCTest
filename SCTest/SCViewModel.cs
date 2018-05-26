@@ -72,10 +72,10 @@ namespace SCTest
             {
                 process.StandardInput.Write("0.exit");
                 process.StandardInput.Write('\x1b');
-                if (!process.WaitForExit(1000))
+                if (!process.WaitForExit(3000))
                 {
                     process.Kill();
-                    process.WaitForExit(500);
+                    process.WaitForExit(1000);
                 }
                 process.ErrorDataReceived -= Process_ErrorDataReceived;
                 process.OutputDataReceived -= Process_OutputDataReceived;
