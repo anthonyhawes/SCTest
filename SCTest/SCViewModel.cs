@@ -52,8 +52,10 @@ namespace SCTest
             if (process == null)
             {
                 var folder = ConfigurationManager.AppSettings["SCFolder"];
+                var arguments = ConfigurationManager.AppSettings["Arguments"];
                 var startInfo = new ProcessStartInfo();
                 startInfo.FileName = Path.Combine(folder, "sclang.exe");
+                startInfo.Arguments = arguments;
                 startInfo.WorkingDirectory = folder;
                 startInfo.CreateNoWindow = true;
                 startInfo.UseShellExecute = false;
