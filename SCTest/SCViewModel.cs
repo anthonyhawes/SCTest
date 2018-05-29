@@ -62,8 +62,6 @@ namespace SCTest
                 startInfo.RedirectStandardError = true;
                 startInfo.RedirectStandardInput = true;
                 startInfo.RedirectStandardOutput = true;
-                startInfo.StandardErrorEncoding = Encoding.UTF8;
-                startInfo.StandardOutputEncoding = Encoding.UTF8;
                 process = Process.Start(startInfo);
                 process.ErrorDataReceived += Process_ErrorDataReceived;
                 process.OutputDataReceived += Process_OutputDataReceived;
